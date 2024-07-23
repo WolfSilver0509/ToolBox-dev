@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Tools - DevToolbox</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <div class="container">
@@ -19,47 +19,56 @@
             </ul>
         </nav>
 
-        <section id="formatConverter">
-            <h2>Format Converter</h2>
-            <textarea id="inputData" placeholder="Enter data here..."></textarea>
-            <select id="inputFormat">
-                <option value="json">JSON</option>
-                <option value="xml">XML</option>
-                <option value="yaml">YAML</option>
-            </select>
-            <select id="outputFormat">
-                <option value="json">JSON</option>
-                <option value="xml">XML</option>
-                <option value="yaml">YAML</option>
-            </select>
-            <button onclick="convertFormat()">Convert</button>
-            <textarea id="outputData" placeholder="Converted data..."></textarea>
-        </section>
+<!-- Format Converter Section -->
+<section id="formatConverter">
+    <h2>Format Converter</h2>
+    <textarea id="inputData" placeholder="Enter data here..."></textarea>
+    <select id="inputFormat">
+        <option value="json">JSON</option>
+        <option value="xml">XML</option>
+        <option value="yaml">YAML</option>
+    </select>
+    <select id="outputFormat">
+        <option value="json">JSON</option>
+        <option value="xml">XML</option>
+        <option value="yaml">YAML</option>
+    </select>
+    <button id="convertFormatBtn">Convert</button>
+    <textarea id="outputData" placeholder="Converted data..."></textarea>
+</section>
 
-        <section id="hashGenerator">
-            <h2>Hash Generator</h2>
-            <textarea id="hashInput" placeholder="Enter text..."></textarea>
-            <select id="hashType">
-                <option value="md5">MD5</option>
-                <option value="sha256">SHA-256</option>
-            </select>
-            <button onclick="generateHash()">Generate Hash</button>
-            <textarea id="hashOutput" placeholder="Generated hash..."></textarea>
-        </section>
+<!-- Hash Generator Section -->
+<section id="hashGenerator">
+    <h2>Hash Generator</h2>
+    <textarea id="hashInput" placeholder="Enter text..."></textarea>
+    <select id="hashType">
+        <option value="md5">MD5</option>
+        <option value="sha256">SHA-256</option>
+    </select>
+    <button id="generateHashBtn">Generate Hash</button>
+    <textarea id="hashOutput" placeholder="Generated hash..."></textarea>
+</section>
 
-        <section id="urlValidator">
-            <h2>URL Validator</h2>
-            <input type="text" id="urlInput" placeholder="Enter URL...">
-            <button onclick="validateURL()">Validate URL</button>
-            <div id="urlValidationResult"></div>
-        </section>
+<!-- URL Validator Section -->
+<section id="urlValidator">
+    <h2>URL Validator</h2>
+    <input type="text" id="urlInput" placeholder="Enter URL...">
+    <button id="validateUrlBtn">Validate URL</button>
+    <div id="urlValidationResult"></div>
+</section>
 
-        <section id="uuidGenerator">
-            <h2>UUID Generator</h2>
-            <button onclick="generateUUID()">Generate UUID</button>
-            <textarea id="uuidOutput" placeholder="Generated UUID..."></textarea>
-        </section>
+<!-- UUID Generator Section -->
+<section id="uuidGenerator">
+    <h2>UUID Generator</h2>
+    <button id="generateUuidBtn">Generate UUID</button>
+    <textarea id="uuidOutput" placeholder="Generated UUID..."></textarea>
+</section>
+
     </div>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+
 </body>
 </html>

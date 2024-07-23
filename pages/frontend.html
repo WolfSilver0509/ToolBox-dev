@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Tools - DevToolbox</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <div class="container">
@@ -19,14 +19,21 @@
             </ul>
         </nav>
 
+        <!-- Color Picker Section -->
         <section id="colorPicker">
             <h2>Color Picker</h2>
-            <input type="color" id="colorInput" onchange="updateColor()">
+            <input type="color" id="colorInput">
             <div id="colorDisplay" style="width: 100px; height: 100px;"></div>
         </section>
 
+        <!-- Minify CSS/JS Section -->
         <section id="minifyCssJs">
             <h2>Minify CSS/JS</h2>
             <textarea id="codeInput" placeholder="Enter CSS/JS code here..."></textarea>
-            <button onclick="minifyCode()">Minify</button>
-            <textarea id="minifiedCodeOutput" pla
+            <button id="minifyCodeBtn">Minify</button>
+            <textarea id="minifiedCodeOutput" placeholder="Minified code..."></textarea>
+        </section>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
