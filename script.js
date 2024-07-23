@@ -262,3 +262,30 @@ if (elementExists('apiUrl') && elementExists('apiResponse')) {
             });
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (elementExists('generatesqlspring')) {
+        document.getElementById('generateConfigBtn').addEventListener('click', function() {
+            console.log("button click");
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const databaseName = document.getElementById('databaseName').value;
+            const port = document.getElementById('port').value;
+
+            const config = `
+# Informations de connexion à la base de données
+spring.datasource.url=jdbc:mysql://localhost:${port}/${databaseName}
+spring.datasource.username=${username}
+spring.datasource.password=${password}
+            `.trim();
+
+            document.getElementById('outputData').value = config;
+            console.log(config);
+        });
+    }
+});
+
+function elementExists(id) {
+    return document.getElementById(id) !== null;
+}
+
