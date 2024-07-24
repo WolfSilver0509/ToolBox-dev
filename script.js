@@ -262,3 +262,73 @@ if (elementExists('apiUrl') && elementExists('apiResponse')) {
             });
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (elementExists('generateConnectionSpringBootData')) {
+        document.getElementById('generateConfigBtn').addEventListener('click', function() {
+            console.log("button click");
+            const dbType = document.querySelector('input[name="dbType"]:checked').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const databaseName = document.getElementById('databaseName').value;
+            const port = document.getElementById('port').value;
+
+            let config = '';
+
+            switch (dbType) {
+                case 'mysql':
+                    config = `
+# Informations de connexion à la base de données MySQL
+spring.datasource.url=jdbc:mysql://localhost:${port}/${databaseName}
+spring.datasource.username=${username}
+spring.datasource.password=${password}
+                    `.trim();
+                    break;
+                case 'postgresql':
+                    config = `
+# Informations de connexion à la base de données PostgreSQL
+spring.datasource.url=jdbc:postgresql://localhost:${port}/${databaseName}
+spring.datasource.username=${username}
+spring.datasource.password=${password}
+                    `.trim();
+                    break;
+                case 'oracle':
+                    config = `
+# Informations de connexion à la base de données Oracle
+spring.datasource.url=jdbc:oracle:thin:@localhost:${port}:${databaseName}
+spring.datasource.username=${username}
+spring.datasource.password=${password}
+                    `.trim();
+                    break;
+                case 'mssql':
+                    config = `
+# Informations de connexion à la base de données Microsoft SQL Server
+spring.datasource.url=jdbc:sqlserver://localhost:${port};databaseName=${databaseName}
+spring.datasource.username=${username}
+spring.datasource.password=${password}
+                    `.trim();
+                    break;
+                case 'h2':
+                    config = `
+# Informations de connexion à la base de données H2 (en mémoire)
+spring.datasource.url=jdbc:h2:mem:${databaseName}
+spring.datasource.username=${username}
+spring.datasource.password=${password}
+                    `.trim();
+                    break;
+                default:
+                    config = 'Database type not supported.';
+                    break;
+            }
+
+            document.getElementById('outputData').value = config;
+            console.log(config);
+        });
+    }
+});
+
+function elementExists(id) {
+    return document.getElementById(id) !== null;
+}
+
+

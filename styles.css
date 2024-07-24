@@ -2,10 +2,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #000;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
   margin: 0;
+  padding: 20px 0; /* Add vertical padding */
 }
 
 .container {
@@ -15,6 +15,19 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px; /* Add space between container and next element */
+}
+
+.cardSection {
+  border-radius: 20px;
+  background-color: #2e2e2e;
+  box-shadow: 0 10px 10px 10px rgba(36, 241, 0, 0.5);
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 30px;
+  margin-bottom: 20px; /* Add space between sections */
+  text-align: center; /* Center text inside card sections */
 }
 
 h1 {
@@ -50,9 +63,10 @@ nav ul li a:hover {
 section {
   margin-bottom: 20px;
   color: #fff;
+  text-align: center; /* Center text inside sections */
 }
 
-textarea, input[type="text"], select {
+textarea, input[type="text"], input[type="password"], select {
   width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 10px;
@@ -80,7 +94,6 @@ button:hover {
   background-color: #000;
   color: #020101;
   box-shadow: 0 0 5px #100a0a, 0 0 10px #090606, 0 0 15px #fff;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .neon-button:hover {
@@ -130,4 +143,101 @@ button:hover {
   border-radius: 5px;
   background-color: #2e2e2e;
   color: #fff;
+}
+
+#generateConnectionSpringBootData {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+#dbConnectionForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dbConnectionForm input, 
+#dbConnectionForm button, 
+#outputData {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.ShadowDATA {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#dbConnectionForm button {
+  background: #0f0;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.4), 0 6px 20px rgba(0, 255, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+#dbConnectionForm button:hover {
+  background: #fff;
+  box-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0;
+}
+
+#outputData {
+  background: #222;
+  color: #fff;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.radioSelectBdd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+
+
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .container, .cardSection {
+    width: 90%;
+  }
+
+  .radioSelectBdd {
+    gap: 8px;
+  }
+
+
+  #dbConnectionForm input, 
+  #dbConnectionForm button, 
+  #outputData {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .cardSection {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #dbConnectionForm input, 
+  #dbConnectionForm button, 
+  #outputData {
+    width: calc(100% - 20px);
+  }
+
+  .radioSelectBdd {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }

@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="container">
+    <header class="container">
         <h1>Full Stack Tools</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="github.html">GitHub Tools</a></li>
                 <li><a href="fullstack.html">Full Stack Tools</a></li>
                 <li><a href="frontend.html">Frontend Tools</a></li>
@@ -19,56 +19,77 @@
             </ul>
         </nav>
 
-<!-- Format Converter Section -->
-<section id="formatConverter">
-    <h2>Format Converter</h2>
-    <textarea id="inputData" placeholder="Enter data here..."></textarea>
-    <select id="inputFormat">
-        <option value="json">JSON</option>
-        <option value="xml">XML</option>
-        <option value="yaml">YAML</option>
-    </select>
-    <select id="outputFormat">
-        <option value="json">JSON</option>
-        <option value="xml">XML</option>
-        <option value="yaml">YAML</option>
-    </select>
-    <button id="convertFormatBtn">Convert</button>
-    <textarea id="outputData" placeholder="Converted data..."></textarea>
-</section>
+        
+    </header>
 
-<!-- Hash Generator Section -->
-<section id="hashGenerator">
-    <h2>Hash Generator</h2>
-    <textarea id="hashInput" placeholder="Enter text..."></textarea>
-    <select id="hashType">
-        <option value="md5">MD5</option>
-        <option value="sha256">SHA-256</option>
-    </select>
-    <button id="generateHashBtn">Generate Hash</button>
-    <textarea id="hashOutput" placeholder="Generated hash..."></textarea>
-</section>
+    <!-- Generate SQL SPRINGBOOT Section -->
+    <section id="generateConnectionSpringBootData" class="cardSection">
+        <h2>Generate SQL Connection for SpringBoot</h2>
+        <form id="dbConnectionForm">
+            <div class="radioSelectBdd">
+            <label><input type="radio" name="dbType" value="mysql" required> MySQL</label><br>
+            <label><input type="radio" name="dbType" value="postgresql"> PostgreSQL</label><br>
+            <label><input type="radio" name="dbType" value="oracle"> Oracle</label><br>
+            <label><input type="radio" name="dbType" value="mssql"> Microsoft SQL Server</label><br>
+            <label><input type="radio" name="dbType" value="h2"> H2</label><br><br>
+        </div>
+            <input class="ShadowDATA" type="text" id="username" placeholder="Username" required>
+            <input class="ShadowDATA" type="password" id="password" placeholder="Password" required>
+            <input class="ShadowDATA" type="text" id="databaseName" placeholder="Database Name" required>
+            <input class="ShadowDATA" type="number" id="port" placeholder="Port" required>
+            <button type="button" id="generateConfigBtn">Generate</button>
+        </form>
+        <textarea id="outputData" placeholder="Generated config SQL to Spring." readonly></textarea>
+    </section>
 
-<!-- URL Validator Section -->
-<section id="urlValidator">
-    <h2>URL Validator</h2>
-    <input type="text" id="urlInput" placeholder="Enter URL...">
-    <button id="validateUrlBtn">Validate URL</button>
-    <div id="urlValidationResult"></div>
-</section>
+    <!-- Format Converter Section -->
+    <section id="formatConverter" class="cardSection">
+        <h2>Format Converter</h2>
+        <textarea id="inputData" placeholder="Enter data here..."></textarea>
+        <select id="inputFormat">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+            <option value="yaml">YAML</option>
+        </select>
+        <select id="outputFormat">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+            <option value="yaml">YAML</option>
+        </select>
+        <button id="convertFormatBtn">Convert</button>
+        <textarea id="outputData" placeholder="Converted data..."></textarea>
+    </section>
 
-<!-- UUID Generator Section -->
-<section id="uuidGenerator">
-    <h2>UUID Generator</h2>
-    <button id="generateUuidBtn">Generate UUID</button>
-    <textarea id="uuidOutput" placeholder="Generated UUID..."></textarea>
-</section>
+    <!-- Hash Generator Section -->
+    <section id="hashGenerator" class="cardSection">
+        <h2>Hash Generator</h2>
+        <textarea id="hashInput" placeholder="Enter text..."></textarea>
+        <select id="hashType">
+            <option value="md5">MD5</option>
+            <option value="sha256">SHA-256</option>
+        </select>
+        <button id="generateHashBtn">Generate Hash</button>
+        <textarea id="hashOutput" placeholder="Generated hash..."></textarea>
+    </section>
 
-    </div>
+    <!-- URL Validator Section -->
+    <section id="urlValidator" class="cardSection">
+        <h2>URL Validator</h2>
+        <input type="text" id="urlInput" placeholder="Enter URL...">
+        <button id="validateUrlBtn">Validate URL</button>
+        <div id="urlValidationResult"></div>
+    </section>
+
+    <!-- UUID Generator Section -->
+    <section id="uuidGenerator" class="cardSection">
+        <h2>UUID Generator</h2>
+        <button id="generateUuidBtn">Generate UUID</button>
+        <textarea id="uuidOutput" placeholder="Generated UUID..."></textarea>
+    </section>
+    
     <script src="/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
 </body>
 </html>
