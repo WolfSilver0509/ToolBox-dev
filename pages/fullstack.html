@@ -23,13 +23,20 @@
     </header>
 
     <!-- Generate SQL SPRINGBOOT Section -->
-    <section id="generatesqlspring" class="cardSection">
+    <section id="generateConnectionSpringBootData" class="cardSection">
         <h2>Generate SQL Connection for SpringBoot</h2>
         <form id="dbConnectionForm">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <input type="text" id="databaseName" placeholder="Database Name" required>
-            <input type="number" id="port" placeholder="Port" required>
+            <div class="radioSelectBdd">
+            <label><input type="radio" name="dbType" value="mysql" required> MySQL</label><br>
+            <label><input type="radio" name="dbType" value="postgresql"> PostgreSQL</label><br>
+            <label><input type="radio" name="dbType" value="oracle"> Oracle</label><br>
+            <label><input type="radio" name="dbType" value="mssql"> Microsoft SQL Server</label><br>
+            <label><input type="radio" name="dbType" value="h2"> H2</label><br><br>
+        </div>
+            <input class="ShadowDATA" type="text" id="username" placeholder="Username" required>
+            <input class="ShadowDATA" type="password" id="password" placeholder="Password" required>
+            <input class="ShadowDATA" type="text" id="databaseName" placeholder="Database Name" required>
+            <input class="ShadowDATA" type="number" id="port" placeholder="Port" required>
             <button type="button" id="generateConfigBtn">Generate</button>
         </form>
         <textarea id="outputData" placeholder="Generated config SQL to Spring." readonly></textarea>
