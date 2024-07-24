@@ -1,0 +1,75 @@
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Add space between container and next element */
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #edf0f3;
+    color: rgb(255, 255, 255);
+  }
+/* Neon button colors */
+.neon-button {
+  background-color: #000;
+  color: #020101;
+  box-shadow: 0 0 5px #100a0a, 0 0 10px #090606, 0 0 15px #fff;
+}
+
+.neon-button:hover {
+  background-color: #000;
+}
+
+.neon-button.rose {
+  background-color: #ff007b;
+  box-shadow: 0 0 5px #ff007b, 0 0 10px #ff007b, 0 0 15px #ff007b;
+}
+
+.neon-button.blue {
+  background-color: #007BFF;
+  box-shadow: 0 0 5px #007BFF, 0 0 10px #007BFF, 0 0 15px #007BFF;
+}
+
+.neon-button.violet {
+  background-color: #9400D3;
+  box-shadow: 0 0 5px #9400D3, 0 0 10px #9400D3, 0 0 15px #9400D3;
+}
+
+.neon-button.green {
+  background-color: #00FF00;
+  box-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;
+}
+
+.neon-button.orange {
+  background-color: #FFA500;
+  box-shadow: 0 0 5px #FFA500, 0 0 10px #FFA500, 0 0 15px #FFA500;
+}
+
+.neon-button.yellow {
+    background-color: rgb(234, 237, 15);
+    box-shadow: 0 0 5px rgb(242, 255, 0), 0 0 10px rgb(242, 255, 0), 0 0 15px rgb(242, 255, 0);
+  }
