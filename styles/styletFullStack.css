@@ -1,0 +1,11 @@
+.cardSection {
+    border-radius: 20px;
+    background-color: #2e2e2e;
+    box-shadow: 0 10px 10px 10px rgba(36, 241, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 30px;
+    margin-bottom: 20px; /* Add space between sections */
+    text-align: center; /* Center text inside card sections */
+  }

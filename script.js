@@ -332,16 +332,16 @@ if (elementExists('apiUrl') && elementExists('apiResponse')) {
 // }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.neon-button');
-    const output = document.getElementById('output');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const buttons = document.querySelectorAll('.neon-button');
+//     const output = document.getElementById('output');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const text = this.getAttribute('data-text');
-            output.textContent = text;
-        });
-    });
-});
+//     buttons.forEach(button => {
+//         button.addEventListener('click', function() {
+//             const text = this.getAttribute('data-text');
+//             output.textContent = text;
+//         });
+//     });
+// });
 
 

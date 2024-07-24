@@ -17,7 +17,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px; /* Add space between container and next element } */
 
-.cardSection {
+/* .cardSection {
   border-radius: 20px;
   background-color: #2e2e2e;
   box-shadow: 0 10px 10px 10px rgba(36, 241, 0, 0.5);
@@ -25,9 +25,9 @@ body {
   max-width: 600px;
   padding: 20px;
   margin: 30px;
-  margin-bottom: 20px; /* Add space between sections */
-  text-align: center; /* Center text inside card sections */
-}
+  margin-bottom: 20px; /* Add space between sections 
+  text-align: center;  Center text inside card sections 
+} */
 
 h1 {
   text-align: center;
@@ -241,11 +241,6 @@ button:hover {
   }
 }
 
-.container {
-  width: 90%;
-  max-width: 800px;
-  padding: 20px;
-}
 
 .card {
   background-color: #1e1e1e;
