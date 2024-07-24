@@ -3,10 +3,10 @@ body {
   background-color: #000;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  align-items: center; /* Center the content horizontally */
   margin: 0;
+  padding: 20px 0; /* Add vertical padding */
 }
-
 
 .container {
   width: 90%;
@@ -15,14 +15,19 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px; /* Add space between container and next element */
 }
 
 .cardSection {
-border-radius: 20px;
-background-color: #2e2e2e;
-box-shadow: 0 10px 10px rgba(3, 194, 102, 0.5)0.5;
-height: 800px;
-width: 600px;
+  border-radius: 20px;
+  background-color: #2e2e2e;
+  box-shadow: 0 10px 10px 10px rgba(36, 241, 0, 0.5);
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 30px;
+  margin-bottom: 20px; /* Add space between sections */
+  text-align: center; /* Center text inside card sections */
 }
 
 h1 {
@@ -58,9 +63,10 @@ nav ul li a:hover {
 section {
   margin-bottom: 20px;
   color: #fff;
+  text-align: center; /* Center text inside sections */
 }
 
-textarea, input[type="text"], select {
+textarea, input[type="text"], input[type="password"], select {
   width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 10px;
@@ -88,7 +94,6 @@ button:hover {
   background-color: #000;
   color: #020101;
   box-shadow: 0 0 5px #100a0a, 0 0 10px #090606, 0 0 15px #fff;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .neon-button:hover {
@@ -155,7 +160,8 @@ button:hover {
 #dbConnectionForm input, 
 #dbConnectionForm button, 
 #outputData {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   padding: 10px;
   margin: 10px 0;
   border: none;
@@ -187,4 +193,30 @@ button:hover {
   color: #fff;
   height: 150px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .container, .cardSection {
+    width: 90%;
+  }
+
+  #dbConnectionForm input, 
+  #dbConnectionForm button, 
+  #outputData {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .cardSection {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #dbConnectionForm input, 
+  #dbConnectionForm button, 
+  #outputData {
+    width: calc(100% - 20px);
+  }
 }
