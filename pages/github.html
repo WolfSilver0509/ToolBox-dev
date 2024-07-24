@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Tools - DevToolbox</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/styleHeader.css">
 </head>
 <body>
-    <div class="container">
-        <h1>GitHub Tools</h1>
+    <header class="container">
+        <h1>DevToolbox</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="github.html">GitHub Tools</a></li>
-                <li><a href="fullstack.html">Full Stack Tools</a></li>
-                <li><a href="frontend.html">Frontend Tools</a></li>
-                <li><a href="backend.html">Backend Tools</a></li>
+                <li><a href="../index.html" class="neon-button blue">Home</a></li>
+                <li><a href="github.html" class="neon-button violet">GitHub Tools</a></li>
+                <li><a href="fullstack.html" class="neon-button green">Full Stack Tools</a></li>
+                <li><a href="frontend.html" class="neon-button orange">Frontend Tools</a></li>
+                <li><a href="backend.html" class="neon-button rose">Backend Tools</a></li>
+                <li><a href="Files.html" class="neon-button yellow">Files Tools</a></li>
             </ul>
         </nav>
+    </header>
 
         <section id="readmeGenerator">
             <h2>README Generator</h2>
@@ -32,7 +35,6 @@
             <button onclick="fetchGithubStats()">Fetch Stats</button>
             <div id="statsOutput"></div>
         </section>
-    </div>
-    <script src="/script.js"></script>
+    <script src="../scripts/scriptGitHub.js"></script>
 </body>
 </html>
