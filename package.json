@@ -4,5 +4,8 @@
   },
   "dependencies": {
     "servor": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.7.0"
   }
 }
