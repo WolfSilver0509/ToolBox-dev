@@ -6,7 +6,6 @@
 ## We're building a developer toolbox! ️ Two passionate developers have joined forces to create an open and collaborative space. Join our project and contribute to building this essential toolbox for developers!
 
 
-
 ## License
 Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)
 
